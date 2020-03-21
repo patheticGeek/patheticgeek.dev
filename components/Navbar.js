@@ -28,6 +28,7 @@ function Navbar({ links }) {
   return (
     <>
       <div className={`page-loader${loading ? " loading" : ""}`} />
+
       <div className={`navbar${open ? " menu-open" : ""}${loading ? " loading" : ""}`}>
         <div className="content">
           <Link href="/">
@@ -38,6 +39,7 @@ function Navbar({ links }) {
           </div>
         </div>
       </div>
+
       <div className={`menu${open ? " menu-open" : ""}`}>
         <div className="content">
           <div className="mobile-social__links">
@@ -57,6 +59,7 @@ function Navbar({ links }) {
               <ion-icon name="logo-codepen" />
             </a>
           </div>
+
           <div className="content-contact">
             <img className="contact-img" src="/avatar.jpg" alt="avatar" />
             <h2>Contact Details</h2>
@@ -79,6 +82,7 @@ function Navbar({ links }) {
               </a>
             </div>
           </div>
+
           <div className="content-nav">
             <nav>
               <ul className="content-nav__links">
