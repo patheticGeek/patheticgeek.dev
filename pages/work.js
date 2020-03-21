@@ -1,12 +1,12 @@
 import React from "react";
 import Link from "next/link";
 
-function Index() {
+function Work() {
   return (
     <main>
-      <h1>Index</h1>
-      <Link href="/work">
-        <a>Work</a>
+      <h1>Work</h1>
+      <Link href="/">
+        <a>Index</a>
       </Link>
       <Link href="/about">
         <a>About</a>
@@ -15,4 +15,6 @@ function Index() {
   );
 }
 
-export default Index;
+Work.pageTitle = "Work";
+
+export default Work;
