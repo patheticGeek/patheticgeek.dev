@@ -13,6 +13,7 @@ body {
   font-weight: 300;
   line-height: 1.2;
   font-family: "Work Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -26,6 +27,93 @@ h6 {
   font-weight: 500;
 }
 
-main {
+.text-accent {
+  color: var(--accent) !important;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
   padding: 80px 24px;
+  height: calc(100vh - 160px);
+  background-image: url("line-home.svg");
+  background-position: right;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+header > .content {
+  width: 100%;
+  margin: auto;
+  max-width: 600px;
+  text-align: center;
+}
+.header-content__subtitle {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.075rem;
+  margin-bottom: 8px;
+  color: #191a1e;
+  opacity: 0.4;
+}
+.header-content__title {
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.header-content__btn {
+  display: flex;
+  height: 60px;
+  max-width: 160px;
+  margin: 0px auto;
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 30px;
+  justify-content: center;
+  text-decoration: none;
+}
+.header-content__btn-text {
+  margin: auto 0px;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+.header-content__btn-arrow {
+  display: flex;
+  height: 12px;
+  width: 12px;
+  margin: auto 0px;
+  background-image: url("arrow-small-light.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.1s all ease-in-out;
+}
+.header-content__btn:hover .header-content__btn-arrow {
+  transform: translateX(3px);
+}
+.header-content__btn-next {
+  background-color: var(--accent);
+  display: block;
+  height: 70px;
+  width: 70px;
+  margin: 0px auto;
+  background-image: url("arrow-medium-light.svg");
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.15s all ease-in-out;
+}
+.header-content__btn-next:hover {
+  background-position: center calc(50% + 12px);
+}
+
+@media screen and (min-width: 700px) {
+  .header-content__title {
+    font-weight: 600;
+    font-size: 3.25rem;
+  }
+}
+
+section#home-about {
+  height: 100vh;
 }
