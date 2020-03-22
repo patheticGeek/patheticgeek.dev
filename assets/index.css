@@ -37,7 +37,7 @@ header {
   padding: 80px 24px;
   height: calc(100vh - 160px);
   background-image: url("line-home.svg");
-  background-position: right;
+  background-position: right calc(100% - 80px - 35px);
   background-size: 50%;
   background-repeat: no-repeat;
 }
