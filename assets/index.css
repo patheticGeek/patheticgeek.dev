@@ -40,7 +40,7 @@ header {
   background-image: url("line-home.svg");
   background-position: 50vw calc(50% - 80px - 35px);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 header > .content {
   width: 100%;
@@ -57,7 +57,7 @@ header > .content {
 }
 .header-content__title {
   font-weight: 500;
-  font-size: 3rem;
+  font-size: 2.75rem;
   line-height: 1.2;
   margin-bottom: 24px;
 }
@@ -108,7 +108,17 @@ header > .content {
   background-position: center calc(50% + 8px);
 }
 
+@media screen and (min-width: 450px) {
+  .header-content__title {
+    font-weight: 500;
+    font-size: 3rem;
+  }
+}
+
 @media screen and (min-width: 700px) {
+  header {
+    background-size: contain;
+  }
   .header-content__title {
     font-weight: 600;
     font-size: 3.25rem;
@@ -116,7 +126,7 @@ header > .content {
 }
 
 section#home-about {
-  min-height: 70vh;
+  min-height: 50vh;
   display: flex;
   color: var(--white);
   background-color: var(--black);
