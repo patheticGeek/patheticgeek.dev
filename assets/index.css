@@ -36,10 +36,11 @@ header {
   flex-direction: column;
   padding: 80px 24px;
   height: calc(100vh - 160px);
+  background-color: var(--white);
   background-image: url("line-home.svg");
-  background-position: right calc(100% - 80px - 35px);
-  background-size: 50%;
+  background-position: 50vw calc(50% - 80px - 35px);
   background-repeat: no-repeat;
+  background-size: contain;
 }
 header > .content {
   width: 100%;
@@ -52,8 +53,7 @@ header > .content {
   font-weight: 500;
   letter-spacing: 0.075rem;
   margin-bottom: 8px;
-  color: #191a1e;
-  opacity: 0.4;
+  color: rgba(25, 26, 30, 0.4);
 }
 .header-content__title {
   font-weight: 500;
@@ -71,6 +71,7 @@ header > .content {
   border-radius: 30px;
   justify-content: center;
   text-decoration: none;
+  font-weight: 400;
 }
 .header-content__btn-text {
   margin: auto 0px;
@@ -104,7 +105,7 @@ header > .content {
   transition: 0.15s all ease-in-out;
 }
 .header-content__btn-next:hover {
-  background-position: center calc(50% + 12px);
+  background-position: center calc(50% + 8px);
 }
 
 @media screen and (min-width: 700px) {
@@ -115,5 +116,72 @@ header > .content {
 }
 
 section#home-about {
-  height: 100vh;
+  min-height: 70vh;
+  display: flex;
+  color: var(--white);
+  background-color: var(--black);
+}
+section#home-about > .content {
+  margin: auto;
+  display: flex;
+  padding: 80px 12px;
+}
+
+.about-text {
+  width: calc(50% - 24px);
+  margin-left: 24px;
+}
+.about-text__title {
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 18px;
+  max-width: 250px;
+  line-height: 1.25;
+}
+.about-text__body {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.2rem;
+  font-weight: 300;
+  max-width: 400px;
+  line-height: 2;
+}
+.about-services {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 120px;
+  margin-right: 12px;
+  width: calc(60% - 120px - 12px);
+}
+.about-services-col {
+  width: 50%;
+  min-width: 150px;
+}
+.about-services__title {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+.about-services__list {
+  list-style-type: none;
+  padding: 0px;
+}
+.about-services__list > li {
+  color: var(--white);
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin: 8px 0px;
+}
+
+@media screen and (max-width: 700px) {
+  section#home-about > .content {
+    flex-direction: column;
+  }
+  section#home-about > .content > * {
+    width: calc(100% - 48px);
+    margin: 12px 24px;
+  }
+  section#home-about > .content > *:first-child {
+    margin-bottom: 38px;
+  }
 }
