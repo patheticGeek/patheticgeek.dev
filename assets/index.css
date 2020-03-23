@@ -184,14 +184,14 @@ section#about > .content {
 }
 
 @media screen and (max-width: 700px) {
-  section#home-about > .content {
+  section#about > .content {
     flex-direction: column;
   }
-  section#home-about > .content > * {
+  section#about > .content > * {
     width: calc(100% - 48px);
     margin: 12px 24px;
   }
-  section#home-about > .content > *:first-child {
+  section#about > .content > *:first-child {
     margin-bottom: 38px;
   }
 }
