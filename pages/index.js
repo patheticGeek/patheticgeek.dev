@@ -11,18 +11,18 @@ function Index() {
             I create <span className="text-accent">beautifully usable</span> websites & apps.
           </h1>
           <Link href="/work">
-            <a className="header-content__btn">
-              <span className="header-content__btn-text">My Work</span>
-              <span className="header-content__btn-arrow" />
+            <a className="btn-solid">
+              <span className="btn-solid__text">My Work</span>
+              <span className="btn-solid__arrow" />
             </a>
           </Link>
         </div>
-        <Link href="#home-about">
+        <Link href="#about">
           <a className="header-content__btn-next" />
         </Link>
       </header>
 
-      <section id="home-about">
+      <section id="about">
         <div className="content">
           <div className="about-text">
             <div className="about-text__title">What can i do for you?</div>

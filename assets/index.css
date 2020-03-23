@@ -61,7 +61,7 @@ header > .content {
   line-height: 1.2;
   margin-bottom: 24px;
 }
-.header-content__btn {
+.btn-solid {
   display: flex;
   height: 60px;
   max-width: 160px;
@@ -73,12 +73,12 @@ header > .content {
   text-decoration: none;
   font-weight: 400;
 }
-.header-content__btn-text {
+.btn-solid__text {
   margin: auto 0px;
   font-size: 1.2rem;
   margin-right: 10px;
 }
-.header-content__btn-arrow {
+.btn-solid__arrow {
   display: flex;
   height: 12px;
   width: 12px;
@@ -89,7 +89,7 @@ header > .content {
   background-repeat: no-repeat;
   transition: 0.1s all ease-in-out;
 }
-.header-content__btn:hover .header-content__btn-arrow {
+.btn-solid:hover .btn-solid__arrow {
   transform: translateX(3px);
 }
 .header-content__btn-next {
@@ -125,13 +125,13 @@ header > .content {
   }
 }
 
-section#home-about {
+section#about {
   min-height: 50vh;
   display: flex;
   color: var(--white);
   background-color: var(--black);
 }
-section#home-about > .content {
+section#about > .content {
   margin: auto;
   display: flex;
   padding: 80px 12px;
