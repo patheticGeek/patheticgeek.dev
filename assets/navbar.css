@@ -104,6 +104,7 @@
   overflow: hidden;
   background-color: var(--black);
   transition: 0.5s top ease-in-out;
+  z-index: 5000;
 }
 .menu .content {
   height: 100%;
