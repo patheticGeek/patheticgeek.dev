@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Router from "next/router";
 import Link from "next/link";
+import Proptypes from "prop-types";
 
 import ActiveLink from "./ActiveLink";
 
@@ -112,6 +113,10 @@ Navbar.defaultProps = {
     { title: "Playground", href: "/playground" },
     { title: "Contact", href: "/contact" }
   ]
+};
+
+Navbar.propTypes = {
+  links: Proptypes.arrayOf(Proptypes.shape({ title: Proptypes.string, href: Proptypes.string }))
 };
 
 export default Navbar;
