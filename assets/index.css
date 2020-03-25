@@ -61,6 +61,7 @@ header > .content {
   line-height: 1.2;
   margin-bottom: 24px;
 }
+
 .btn-solid {
   display: flex;
   height: 60px;
@@ -92,6 +93,7 @@ header > .content {
 .btn-solid:hover .btn-solid__arrow {
   transform: translateX(3px);
 }
+
 .header-content__btn-next {
   background-color: var(--accent);
   display: block;
@@ -126,7 +128,7 @@ header > .content {
 }
 
 section#about {
-  min-height: 50vh;
+  min-height: 60vh;
   display: flex;
   color: var(--white);
   background-color: var(--black);
@@ -134,7 +136,7 @@ section#about {
 section#about > .content {
   margin: auto;
   display: flex;
-  padding: 80px 12px;
+  padding: 120px 12px;
 }
 
 .about-text {
@@ -193,5 +195,189 @@ section#about > .content {
   }
   section#about > .content > *:first-child {
     margin-bottom: 38px;
+  }
+}
+
+section#work {
+  padding: 120px 12px;
+  width: calc(100% - 24px);
+}
+
+.work-title {
+  display: flex;
+  justify-content: center;
+}
+.work-title h2 {
+  font-size: 2.75rem;
+  font-weight: 500;
+  margin: auto 0px;
+  margin-right: 16px;
+}
+
+.work-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 24px;
+}
+.work-content .work-card {
+  width: calc(30vw - 24px - 96px);
+  height: calc(30vw - 24px - 96px);
+  min-width: 270px;
+  min-height: 270px;
+  margin-top: 24px;
+}
+
+.btn-outline {
+  display: flex;
+  height: 60px;
+  min-width: 160px;
+  margin: 0px 8px;
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 30px;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 400;
+  border: 1px solid rgba(25, 26, 30, 0.15);
+}
+.btn-outline__text {
+  margin: auto 0px;
+  font-size: 1.2rem;
+}
+.btn-outline__arrow {
+  display: flex;
+  height: 12px;
+  width: 12px;
+  margin: auto 0px;
+  margin-left: 12px;
+  background-image: url("arrow-small-light.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.1s all ease-in-out;
+  mix-blend-mode: difference;
+}
+.btn-outline:hover .btn-outline__arrow {
+  transform: translateX(3px);
+}
+
+@media screen and (max-width: 700px) {
+  section#work {
+    padding: 48px 12px;
+  }
+  .work-title {
+    flex-direction: column;
+  }
+  .work-title > * {
+    margin: 8px auto;
+  }
+  .work-title h2 {
+    margin: 8px auto;
+    font-size: 2.5rem;
+  }
+}
+
+.work-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  background-color: #eeeee5;
+  color: var(--black);
+  transition: 0.3s all ease-in-out;
+  text-decoration: none;
+  overflow: hidden;
+}
+.work-card:hover {
+  transform: translateY(-10px);
+}
+.work-card.inView::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: block;
+  width: 0px;
+  height: 100%;
+  background-color: var(--white);
+  animation-delay: 0.15s;
+  animation: 0.5s work-card-anim ease-in-out;
+}
+.work-card__subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgba(25, 26, 30, 0.4);
+}
+.work-card__main {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: auto 0px;
+  flex: 1;
+}
+.work-card__main-text {
+  margin: auto 0px;
+}
+.work-card__title {
+  letter-spacing: 0.1rem;
+  color: var(--black);
+}
+.work-card__type {
+  color: var(--accent);
+}
+.work-card__image-container {
+  flex: 1;
+  height: 200px;
+  margin: auto 8px;
+  margin-right: -25%;
+}
+.work-card__image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.work-card__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.work-card__arrow {
+  width: 26px;
+  height: 17px;
+  background-image: url("arrow-big-dark.svg");
+  transition: 0.3s all ease-in-out;
+}
+.work-card:hover .work-card__arrow {
+  transform: rotate(-35deg);
+}
+.work-card__visit {
+  color: rgba(25, 26, 30, 0.4);
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  transition: 0.3s all ease-in-out;
+}
+.work-card:hover .work-card__visit {
+  color: rgba(25, 26, 30, 1);
+}
+
+@keyframes work-card-anim {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0px;
+  }
+}
+@-webkit-keyframes work-card-anim {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0px;
   }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import WorkCard from "../components/WorkCard";
 
 function Index() {
   return (
@@ -8,9 +9,9 @@ function Index() {
         <div className="content">
           <h3 className="header-content__subtitle">Web & Mobile developer</h3>
           <h1 className="header-content__title">
-            I create <span className="text-accent">beautifully usable</span> websites & apps.
+            I create <span className="text-accent">performant</span> websites & apps.
           </h1>
-          <Link href="/work">
+          <Link href="#work">
             <a className="btn-solid">
               <span className="btn-solid__text">My Work</span>
               <span className="btn-solid__arrow" />
@@ -55,6 +56,24 @@ function Index() {
               </ul>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="work">
+        <div className="work-title">
+          <h2>Recent work</h2>
+          <Link href="/work">
+            <a className="btn-outline">
+              <span className="btn-outline__text">All Work</span>
+              <span className="btn-outline__arrow" />
+            </a>
+          </Link>
+        </div>
+
+        <div className="work-content">
+          <WorkCard />
+
+          <WorkCard />
         </div>
       </section>
     </>
