@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import WorkCard from "../components/WorkCard";
+import Footer from "../components/Footer";
 
 function Index() {
   return (
@@ -76,6 +77,8 @@ function Index() {
           <WorkCard />
         </div>
       </section>
+
+      <Footer />
     </>
   );
 }

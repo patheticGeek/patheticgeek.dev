@@ -73,6 +73,7 @@ header > .content {
   justify-content: center;
   text-decoration: none;
   font-weight: 400;
+  padding: 0px 12px;
 }
 .btn-solid__text {
   margin: auto 0px;
@@ -199,6 +200,7 @@ section#about > .content {
 }
 
 section#work {
+  background-color: #fff;
   padding: 120px 12px;
   width: calc(100% - 24px);
 }
@@ -239,6 +241,7 @@ section#work {
   justify-content: center;
   text-decoration: none;
   font-weight: 400;
+  padding: 0px 12px;
   border: 1px solid rgba(25, 26, 30, 0.15);
 }
 .btn-outline__text {
@@ -379,5 +382,44 @@ section#work {
   }
   to {
     width: 0px;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(25, 26, 30, 0.15);
+  background-color: #fff;
+}
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  padding: 120px 0px;
+  max-width: 1260px;
+  margin: 0px auto;
+}
+.footer-text__subtitle {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: rgba(25, 26, 30, 0.4);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+.footer-text__title {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 2.75rem;
+  text-align: center;
+}
+footer .btn-outline {
+  margin: 0px auto;
+}
+
+@media screen and (max-width: 700px) {
+  .footer-text__title {
+    font-weight: 500;
+    font-size: 2.5rem;
   }
 }
