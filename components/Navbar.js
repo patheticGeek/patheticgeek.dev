@@ -61,11 +61,8 @@ function Navbar({ links }) {
           <div className="content-contact">
             <img className="contact-img" src="/avatar.jpg" alt="avatar" />
             <h2>Contact Details</h2>
-            <a className="contact-link" href="mailto:contact@patheticgeek.dev">
-              contact@patheticgeek.dev
-            </a>
-            <a className="contact-link" href="tel:+919467226226">
-              +91 9467 226 226
+            <a className="contact-link" href="mailto:geekpathetic@gmail.com">
+              geekpathetic@gmail.com
             </a>
             <h2>Social Media</h2>
             <div className="contact-social__links">
