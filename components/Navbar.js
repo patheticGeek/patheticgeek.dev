@@ -48,8 +48,8 @@ function Navbar({ email, links, socials }) {
               <ion-icon name="mail-outline" />
             </a>
             {socials &&
-              socials.map((social) => (
-                <a href={social.href} className="mobile-social__link" title={social.title}>
+              socials.map((social, i) => (
+                <a href={social.href} className="mobile-social__link" title={social.title} key={i}>
                   <ion-icon name={social.icon} />
                 </a>
               ))}
