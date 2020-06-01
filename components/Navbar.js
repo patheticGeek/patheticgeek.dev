@@ -44,11 +44,8 @@ function Navbar({ links }) {
       <div className={`menu${open ? " menu-open" : ""}`}>
         <div className="content">
           <div className="mobile-social__links">
-            <a className="mobile-social__link" href="mailto:contact@patheticgeek.dev" title="Email">
+            <a className="mobile-social__link" href="mailto:geekpathetic@gmail.com" title="Email">
               <ion-icon name="mail-outline" />
-            </a>
-            <a className="mobile-social__link" href="tel:+919467226226" title="Phone">
-              <ion-icon name="call-outline" />
             </a>
             <a href="https://instagram.com/patheticGeek" className="mobile-social__link" title="instagram">
               <ion-icon name="logo-instagram" />
@@ -111,12 +108,12 @@ Navbar.defaultProps = {
     { title: "Services", href: "/services" },
     { title: "About Me", href: "/about" },
     { title: "Playground", href: "/playground" },
-    { title: "Contact", href: "/contact" }
-  ]
+    { title: "Contact", href: "/contact" },
+  ],
 };
 
 Navbar.propTypes = {
-  links: Proptypes.arrayOf(Proptypes.shape({ title: Proptypes.string, href: Proptypes.string }))
+  links: Proptypes.arrayOf(Proptypes.shape({ title: Proptypes.string, href: Proptypes.string })),
 };
 
 export default Navbar;
