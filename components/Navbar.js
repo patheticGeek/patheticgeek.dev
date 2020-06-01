@@ -5,7 +5,7 @@ import Proptypes from "prop-types";
 
 import ActiveLink from "./ActiveLink";
 
-function Navbar({ links }) {
+function Navbar({ email, links, socials }) {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -44,37 +44,31 @@ function Navbar({ links }) {
       <div className={`menu${open ? " menu-open" : ""}`}>
         <div className="content">
           <div className="mobile-social__links">
-            <a className="mobile-social__link" href="mailto:geekpathetic@gmail.com" title="Email">
+            <a className="mobile-social__link" href={`mailto:${email}`} title="Email">
               <ion-icon name="mail-outline" />
             </a>
-            <a href="https://instagram.com/patheticGeek" className="mobile-social__link" title="instagram">
-              <ion-icon name="logo-instagram" />
-            </a>
-            <a href="https://github.com/patheticGeek" className="mobile-social__link" title="Github">
-              <ion-icon name="logo-github" />
-            </a>
-            <a href="https://codesandbox.io/u/patheticGeek" className="mobile-social__link" title="Codesandbox">
-              <ion-icon name="logo-codepen" />
-            </a>
+            {socials &&
+              socials.map((social) => (
+                <a href={social.href} className="mobile-social__link" title={social.title}>
+                  <ion-icon name={social.icon} />
+                </a>
+              ))}
           </div>
 
           <div className="content-contact">
             <img className="contact-img" src="/avatar.jpg" alt="avatar" />
             <h2>Contact Details</h2>
-            <a className="contact-link" href="mailto:geekpathetic@gmail.com">
-              geekpathetic@gmail.com
+            <a className="contact-link" href={`mailto:${email}`}>
+              {email}
             </a>
             <h2>Social Media</h2>
             <div className="contact-social__links">
-              <a href="https://instagram.com/patheticGeek" className="contact-social__link" title="instagram">
-                <ion-icon name="logo-instagram" />
-              </a>
-              <a href="https://github.com/patheticGeek" className="contact-social__link" title="Github">
-                <ion-icon name="logo-github" />
-              </a>
-              <a href="https://codesandbox.io/u/patheticGeek" className="contact-social__link" title="Codesandbox">
-                <ion-icon name="logo-codepen" />
-              </a>
+              {socials &&
+                socials.map((social, i) => (
+                  <a href={social.href} className="contact-social__link" title={social.title} key={i}>
+                    <ion-icon name={social.icon} />
+                  </a>
+                ))}
             </div>
           </div>
 
@@ -99,6 +93,7 @@ function Navbar({ links }) {
 }
 
 Navbar.defaultProps = {
+  email: "geekpathetic@gmail.com",
   links: [
     { title: "Home", href: "/" },
     { title: "My Work", href: "/work" },
@@ -107,10 +102,17 @@ Navbar.defaultProps = {
     { title: "Playground", href: "/playground" },
     { title: "Contact", href: "/contact" },
   ],
+  socials: [
+    { icon: "logo-instagram", title: "Instagram", href: "https://instagram.com/patheticGeek" },
+    { icon: "logo-github", title: "GitHub", href: "https://github.com/patheticGeek" },
+    { icon: "logo-codepen", title: "CodeSandbox", href: "https://codesandbox.io/u/patheticGeek" },
+  ],
 };
 
 Navbar.propTypes = {
+  email: Proptypes.string,
   links: Proptypes.arrayOf(Proptypes.shape({ title: Proptypes.string, href: Proptypes.string })),
+  socials: Proptypes.arrayOf(Proptypes.shape({ icon: Proptypes.string, title: Proptypes.string, href: Proptypes.string })),
 };
 
 export default Navbar;
