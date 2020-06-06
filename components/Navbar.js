@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import Router from "next/router";
+import React, { useState } from "react";
 import Link from "next/link";
 import Proptypes from "prop-types";
 
@@ -7,30 +6,10 @@ import ActiveLink from "./ActiveLink";
 
 function Navbar({ email, links, socials }) {
   const [open, setOpen] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const routeChangeStart = () => setLoading(true);
-    const routeChangeEnd = () => {
-      setLoading(false);
-      if (open) setOpen(false);
-    };
-
-    Router.events.on("routeChangeStart", routeChangeStart);
-    Router.events.on("routeChangeError", routeChangeEnd);
-    Router.events.on("routeChangeComplete", routeChangeEnd);
-    return () => {
-      Router.events.off("routeChangeStart", routeChangeStart);
-      Router.events.off("routeChangeError", routeChangeEnd);
-      Router.events.off("routeChangeComplete", routeChangeEnd);
-    };
-  });
 
   return (
     <>
-      <div className={`page-loader${loading ? " loading" : ""}`} />
-
-      <div className={`navbar${open ? " menu-open" : ""}${loading ? " loading" : ""}`}>
+      <div className={`navbar${open ? " menu-open" : ""}`}>
         <div className="content">
           <Link href="/">
             <a className="nav-logo">Pathetic</a>

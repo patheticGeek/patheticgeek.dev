@@ -247,17 +247,3 @@
     display: none;
   }
 }
-
-.page-loader {
-  position: absolute;
-  height: 0vh;
-  top: 0px;
-  left: 0;
-  right: 0;
-  background-color: var(--black);
-  transition: 0.3s all ease-in-out;
-  z-index: 1000;
-}
-.page-loader.loading {
-  height: 100vh;
-}
