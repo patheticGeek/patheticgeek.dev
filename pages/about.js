@@ -47,6 +47,7 @@ function About() {
             </p>
           </div>
           <div className="location-map">
+            <div className="dot" />
             <img src="./ambala.svg" alt="Ambala, Harayana, India" />
           </div>
         </div>

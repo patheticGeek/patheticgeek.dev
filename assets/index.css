@@ -251,18 +251,81 @@ section#location p {
 }
 .location-text {
   width: 40%;
-  margin-right: 24px;
+  padding-right: 24px;
 }
 .location-map {
-  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 400px;
+  position: relative;
+}
+.location-map .dot {
+  display: block;
+  position: absolute;
+  top: calc(19% - 7px);
+  left: calc(81% - 7px);
+  height: 14px;
+  width: 14px;
+  background-color: var(--accent);
+  border-radius: 10px;
+}
+.location-map .dot::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(50% - 7px);
+  left: calc(50% - 7px);
+  margin-top: -2px;
+  margin-left: -2px;
+  height: 14px;
+  width: 14px;
+  border: 2px solid var(--accent);
+  border-radius: 50px;
+  animation: dot-animation 1.5s infinite;
 }
 .location-map > img {
   width: 100%;
-  max-width: 400px;
   height: auto;
+}
+
+@keyframes dot-animation {
+  0% {
+    top: calc(50% - 6px);
+    left: calc(50% - 6px);
+    height: 12px;
+    width: 12px;
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    height: 30px;
+    width: 30px;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes dot-animation {
+  0% {
+    top: calc(50% - 6px);
+    left: calc(50% - 6px);
+    height: 12px;
+    width: 12px;
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    height: 30px;
+    width: 30px;
+    opacity: 0;
+  }
 }
 
 .about-text {
