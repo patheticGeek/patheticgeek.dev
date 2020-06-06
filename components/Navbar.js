@@ -1,11 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Router from "next/router";
 import Proptypes from "prop-types";
 
 import ActiveLink from "./ActiveLink";
 
 function Navbar({ email, links, socials }) {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const routeChangeEnd = () => {
+      if (open) setOpen(false);
+    };
+
+    Router.events.on("routeChangeError", routeChangeEnd);
+    Router.events.on("routeChangeComplete", routeChangeEnd);
+    return () => {
+      Router.events.off("routeChangeError", routeChangeEnd);
+      Router.events.off("routeChangeComplete", routeChangeEnd);
+    };
+  });
 
   return (
     <>
