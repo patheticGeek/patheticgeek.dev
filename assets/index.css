@@ -108,8 +108,10 @@ header.about-header > .content {
   margin-right: 16px;
 }
 .about-stats h1 {
-  font-size: 3em;
+  font-size: 3.75em;
   font-weight: 600;
+  line-height: 1;
+  margin-bottom: 4px;
 }
 .about-main-body {
   color: rgba(255, 255, 255, 0.75);
