@@ -25,7 +25,7 @@ function About() {
                   </div>
                 </div>
                 <p>
-                  Hello world! I'm Pathetic Geek (Shivam nagi). I've been interested in how computers work from an early age and started
+                  Hello world! I'm Pathetic Geek. I've been interested in how computers work from an early age and started
                   learning coding about 5 years ago, now I mainly code in JavaScript and have build some quality websites and apps both
                   professionally and as a personal project. Mainly i make websites with ReactJS and cross platform mobile apps in React
                   Native.
